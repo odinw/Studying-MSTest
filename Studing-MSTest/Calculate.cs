@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Studing_MSTest
+﻿namespace Studing_MSTest
 {
     public class Calculate
     {

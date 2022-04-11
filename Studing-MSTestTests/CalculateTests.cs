@@ -9,21 +9,34 @@ namespace Studing_MSTest.Tests
     [TestClass()]
     public class CalculateTests
     {
+        // basic sample
         [TestMethod()]
         public void Add()
         {
-            Calculate calculate = new Calculate();
-            var sum = calculate.Add(1, 2);
-            Assert.AreEqual(sum, 3);
+            // arrage
+            var expected = 3;
+            var calculate = new Calculate();
+
+            // act
+            var result = calculate.Add(1, 2);
+
+            // assert
+            Assert.AreEqual(expected, result);
         }
 
         [TestMethod()]
         [DataRow(1, 2, 3)]
-        public void Add_ParameterByDataRow(int v1, int v2, int result)
+        [DataRow(30, 70, 100)]
+        public void Add_ParameterByDataRow(int value1, int value2, int expected)
         {
-            Calculate calculate = new Calculate();
-            var sum = calculate.Add(v1, v2);
-            Assert.AreEqual(sum, result);
+            // arrage
+            var calculate = new Calculate();
+
+            // act
+            var result = calculate.Add(value1, value2);
+
+            // assert
+            Assert.AreEqual(expected, result);
         }
     }
 }
